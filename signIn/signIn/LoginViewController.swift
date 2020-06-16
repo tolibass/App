@@ -9,7 +9,7 @@
 import UIKit
 
 // массив пользователей для входа 
-let users = [(username: "Admin", password : "Admin"), (username: "Manager", password : "Manager123"), (username: "Worker", password : "Worker123") ]
+var users = [(username: "Admin", password : "Admin"), (username: "Manager", password : "Manager123"), (username: "Worker", password : "Worker123") ]
 
 class ViewController: UIViewController {
     
@@ -21,27 +21,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-      
-        
-
-        
+        view.backgroundColor = UIColor.systemPink
         
         CreateLogTextField()
         createPasswordTextField()
         button()
         
-        view.backgroundColor = UIColor.systemPink
-        
-        
     }
     
     
     
-    
-
-    
-
     
     
     // create log in textfield
@@ -85,10 +74,13 @@ class ViewController: UIViewController {
             let AdminVC = storyboard.instantiateViewController(withIdentifier: "AdminStoryboardVC")
             AdminVC.modalPresentationStyle = .overCurrentContext
             AdminVC.modalTransitionStyle = .crossDissolve
-            self.present(AdminVC, animated: true)
-           
+            // создание навигешен контроллера в Админ панеле 
+            let navController = storyboard.instantiateViewController(identifier: "navID")
+            self.show(navController, sender: buton)
             
+            //self.present(navController, animated: true, completion: nil)
             
+
             userNameTextField.text = nil
             passwordTextField.text = nil
           

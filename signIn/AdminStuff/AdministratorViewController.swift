@@ -10,7 +10,7 @@ import UIKit
 
 class AdministratorViewController: UIViewController {
     
-
+    
     
     @IBOutlet weak var AdmintableView: UITableView!
     
@@ -23,7 +23,6 @@ class AdministratorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         
        
