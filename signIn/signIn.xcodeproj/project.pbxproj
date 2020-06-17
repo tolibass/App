@@ -7,31 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C2AEF652493D2FD004CE9FB /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2AEF642493D2FD004CE9FB /* NavController.swift */; };
+		1C44A3942494CBB400394194 /* AddUserAdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C44A3932494CBB400394194 /* AddUserAdminViewController.swift */; };
+		1C44A39724965C1E00394194 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C44A39624965C1E00394194 /* UserModel.swift */; };
+		1C44A399249665DF00394194 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C44A398249665DF00394194 /* LoginPresenter.swift */; };
+		1C44A39B24966D9F00394194 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C44A39A24966D9F00394194 /* AppData.swift */; };
 		1C5C9B842490C51B009EA9E7 /* AdministratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5C9B832490C51B009EA9E7 /* AdministratorViewController.swift */; };
 		1C92E867248D6C01008393FE /* ManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C92E866248D6C01008393FE /* ManagerViewController.swift */; };
 		1C92E869248D6C15008393FE /* WorkerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C92E868248D6C15008393FE /* WorkerViewController.swift */; };
 		1C93FB3C248D4AD100833A6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C93FB3B248D4AD100833A6D /* AppDelegate.swift */; };
 		1C93FB3E248D4AD100833A6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C93FB3D248D4AD100833A6D /* SceneDelegate.swift */; };
-		1C93FB40248D4AD100833A6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C93FB3F248D4AD100833A6D /* ViewController.swift */; };
+		1C93FB40248D4AD100833A6D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C93FB3F248D4AD100833A6D /* LoginViewController.swift */; };
 		1C93FB43248D4AD100833A6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C93FB41248D4AD100833A6D /* Main.storyboard */; };
 		1C93FB45248D4AD900833A6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C93FB44248D4AD900833A6D /* Assets.xcassets */; };
 		1C93FB48248D4AD900833A6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C93FB46248D4AD900833A6D /* LaunchScreen.storyboard */; };
-		1CDFAC0924937CD1008EE1C0 /* AddingUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDFAC0824937CD1008EE1C0 /* AddingUsersViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C2AEF642493D2FD004CE9FB /* NavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
+		1C44A3932494CBB400394194 /* AddUserAdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserAdminViewController.swift; sourceTree = "<group>"; };
+		1C44A39624965C1E00394194 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		1C44A398249665DF00394194 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginPresenter.swift; path = ../../LoginPresenter.swift; sourceTree = "<group>"; };
+		1C44A39A24966D9F00394194 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		1C5C9B832490C51B009EA9E7 /* AdministratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdministratorViewController.swift; sourceTree = "<group>"; };
 		1C92E866248D6C01008393FE /* ManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerViewController.swift; sourceTree = "<group>"; };
 		1C92E868248D6C15008393FE /* WorkerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerViewController.swift; sourceTree = "<group>"; };
 		1C93FB38248D4AD100833A6D /* signIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = signIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C93FB3B248D4AD100833A6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C93FB3D248D4AD100833A6D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1C93FB3F248D4AD100833A6D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1C93FB3F248D4AD100833A6D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1C93FB42248D4AD100833A6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1C93FB44248D4AD900833A6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C93FB47248D4AD900833A6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C93FB49248D4AD900833A6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1CDFAC0824937CD1008EE1C0 /* AddingUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingUsersViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,11 +53,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1C5C9B852490C593009EA9E7 /* PersonalViewControlller */ = {
+		1C3AB4972494C54800AF882F /* AdminStuff */ = {
 			isa = PBXGroup;
 			children = (
 				1C5C9B832490C51B009EA9E7 /* AdministratorViewController.swift */,
-				1CDFAC0824937CD1008EE1C0 /* AddingUsersViewController.swift */,
+				1C2AEF642493D2FD004CE9FB /* NavController.swift */,
+				1C44A3932494CBB400394194 /* AddUserAdminViewController.swift */,
+			);
+			path = AdminStuff;
+			sourceTree = "<group>";
+		};
+		1C44A39524965C0300394194 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1C44A39624965C1E00394194 /* UserModel.swift */,
+				1C44A39A24966D9F00394194 /* AppData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1C5C9B852490C593009EA9E7 /* PersonalViewControlller */ = {
+			isa = PBXGroup;
+			children = (
 				1C92E868248D6C15008393FE /* WorkerViewController.swift */,
 				1C92E866248D6C01008393FE /* ManagerViewController.swift */,
 			);
@@ -59,7 +84,9 @@
 		1C93FB2F248D4AD100833A6D = {
 			isa = PBXGroup;
 			children = (
+				1C3AB4972494C54800AF882F /* AdminStuff */,
 				1C5C9B852490C593009EA9E7 /* PersonalViewControlller */,
+				1C44A39524965C0300394194 /* Models */,
 				1C93FB3A248D4AD100833A6D /* signIn */,
 				1C93FB39248D4AD100833A6D /* Products */,
 			);
@@ -78,7 +105,8 @@
 			children = (
 				1C93FB3B248D4AD100833A6D /* AppDelegate.swift */,
 				1C93FB3D248D4AD100833A6D /* SceneDelegate.swift */,
-				1C93FB3F248D4AD100833A6D /* ViewController.swift */,
+				1C93FB3F248D4AD100833A6D /* LoginViewController.swift */,
+				1C44A398249665DF00394194 /* LoginPresenter.swift */,
 				1C93FB41248D4AD100833A6D /* Main.storyboard */,
 				1C93FB44248D4AD900833A6D /* Assets.xcassets */,
 				1C93FB46248D4AD900833A6D /* LaunchScreen.storyboard */,
@@ -158,12 +186,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C44A39B24966D9F00394194 /* AppData.swift in Sources */,
 				1C92E867248D6C01008393FE /* ManagerViewController.swift in Sources */,
-				1C93FB40248D4AD100833A6D /* ViewController.swift in Sources */,
+				1C93FB40248D4AD100833A6D /* LoginViewController.swift in Sources */,
 				1C5C9B842490C51B009EA9E7 /* AdministratorViewController.swift in Sources */,
 				1C93FB3C248D4AD100833A6D /* AppDelegate.swift in Sources */,
+				1C44A399249665DF00394194 /* LoginPresenter.swift in Sources */,
 				1C92E869248D6C15008393FE /* WorkerViewController.swift in Sources */,
-				1CDFAC0924937CD1008EE1C0 /* AddingUsersViewController.swift in Sources */,
+				1C2AEF652493D2FD004CE9FB /* NavController.swift in Sources */,
+				1C44A3942494CBB400394194 /* AddUserAdminViewController.swift in Sources */,
+				1C44A39724965C1E00394194 /* UserModel.swift in Sources */,
 				1C93FB3E248D4AD100833A6D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

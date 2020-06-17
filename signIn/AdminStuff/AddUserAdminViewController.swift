@@ -8,23 +8,49 @@
 
 import UIKit
 
+
+let storyboard = UIStoryboard(name: "Main", bundle: nil)
+let AddUsersVC = storyboard.instantiateViewController(identifier: "AddingUsers")
+
 class AddUserAdminViewController: UIViewController {
 
+    
+    @IBOutlet weak var AddingUsernameLabel: UILabel!
+    
+    @IBOutlet weak var AddingUsernameTextField: UITextField!
+    
+    @IBOutlet weak var AddingPasswordLabel: UILabel!
+    
+    @IBOutlet weak var AddingPasswordTextField: UITextField!
+    
+    
+    @IBOutlet weak var SaveInformationButton: UIButton!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        SaveInformationButton.layer.cornerRadius = 10
+        SaveInformationButton.layer.borderWidth = 2.0
+        SaveInformationButton.layer.borderColor = UIColor.black.cgColor
+        SaveInformationButton.clipsToBounds = true
+        
+        
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func SaveInformationButtonAction(_ sender: Any) {
+        
+        
+        
+        
+      
+            
+        
     }
-    */
-
+    
 }
+
+
