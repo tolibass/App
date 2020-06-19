@@ -37,8 +37,10 @@ struct WorkerUser : UserProtocol {
 }
 
     
-enum userType {
-case Admin
-    case Manager
-    case Worker
+enum userType: String {
+    case Admin = "Admin"
+    case Manager = "Manager"
+    case Worker = "Worker"
 }
+
+

@@ -8,7 +8,10 @@
 
 import UIKit
 
-class AdministratorViewController: UIViewController {
+
+
+class AdministratorViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     
     
     
@@ -24,8 +27,8 @@ class AdministratorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-       
+        AdmintableView.delegate = self
+        AdmintableView.dataSource = self
         
 
     }
@@ -33,10 +36,24 @@ class AdministratorViewController: UIViewController {
     
     @IBAction func LogOutButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
-        
-        
     }
     
+
+   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return AppData.users.count
+   }
+   
+   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell : AdminTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell")! as! AdminTableViewCell
+    cell.usernameLabel.text = AppData.users[indexPath.row].userName
+    cell.roleLabel.text = AppData.users[indexPath.row].type.rawValue
+    cell.accessoryType = .detailButton
+    return cell
+   }
+    
+    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+    
+    }
    
     
 }

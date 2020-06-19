@@ -12,29 +12,39 @@ import UIKit
 
 struct LoginPresenter {
     
-    var vc: LoginViewController
+   var controller: LoginViewController
     
-    init(vc:LoginViewController) {
-        self.vc = vc
-        var textF = vc.userNameTextField.text
-        self.vc.userNameTextField.text = textF
-        var pass = vc.passwordTextField.text
-        let adminvc = AdministratorViewController()
+    
+    init(controller:LoginViewController) {
+       self.controller = controller
+       
         
-        func logg (){
-            if textF == AppData.users[1].userName && pass == AppData.users[1].password {
-                vc.present( adminvc, animated: true, completion: nil)
             }
+    
+    func logAdmin ( name: String?, password: String?   )  {
+        if (name == AppData.users[0].userName && password == AppData.users[0].password) {
+            let navAdminController = getCurrentStoryboard(storyBoardID: "navID")
+            controller.present(navAdminController, animated: true, completion: nil)
         }
-       
-       
+    }
     
+    func missLog (name: String?, password : String? ) {
+        if (name != AppData.users[0].userName && password != AppData.users[0].userName) {
+            controller.showError()
+        }
+    }
     
+       
     }
 
-   
+   protocol LoginViewConnection {
+    func showError ()
+
+    
+      }
+     
         
-}
+
     
     
 
@@ -47,3 +57,14 @@ struct LoginPresenter {
                       let actionAllert = UIAlertAction(title: "Ok", style: .default) { (action) in }
                       allertController.addAction(actionAllert)
        present(allertController, animated: true, completion: nil)*/
+
+
+
+// var textF = vc.userNameTextField.text
+ // vc.userNameTextField.text = textF
+//  var pass = vc.passwordTextField.text
+  
+ // logg(name: textF ?? "", password: pass ?? "")
+
+
+// создаем протокл в презентере подписываем вью на протокол

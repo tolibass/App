@@ -10,5 +10,9 @@ import Foundation
 import UIKit
 
  struct AppData {
-   static let users : [UserProtocol] = [User(userName: "Admin", type: .Admin, id: 1, login: "Admin", password: "Admin")]
+   static let users : [UserProtocol] = [User(userName: "Admin", type: .Admin, id: 1, login: "Admin", password: "Admin"), User(userName: "Admin2", type: .Admin, id: 1, login: "Admin", password: "Admin"), User(userName: "Admin3", type: .Admin, id: 1, login: "Admin", password: "Admin")]
+    
 }
+
+
+
