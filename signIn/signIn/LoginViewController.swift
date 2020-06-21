@@ -9,13 +9,7 @@
 import UIKit
 
 class LoginViewController: UIViewController, LoginViewConnection  {
-    func showError() {
-        let alertController = UIAlertController(title: "Ошибка", message: "Вы ввели неверный логин или пароль", preferredStyle: .alert)
-        let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
-        alertController.addAction(action)
-        present(alertController, animated: true, completion: nil)
-        
-    }
+   
     
     
     @IBOutlet weak var userNameTextField: UITextField!
@@ -39,29 +33,33 @@ class LoginViewController: UIViewController, LoginViewConnection  {
             loginButton.clipsToBounds = true
         
     }
-    
-    
-    
-    
+  
     
     
     @IBAction func loginButtonAction(_ sender: Any) {
         
         presenter?.logAdmin(name: userNameTextField.text, password: passwordTextField.text)
         
-                presenter?.missLog(name: userNameTextField.text, password: passwordTextField.text)
-            
+        presenter?.missLog(name: userNameTextField.text, password: passwordTextField.text)
+    
             
         }
         
-        
-        
-    
-    
-    
-            
-   
+
+     
+   func showError() {
+          let alertController = UIAlertController(title: "Ошибка", message: "Вы ввели неверный логин или пароль", preferredStyle: .alert)
+          let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+          alertController.addAction(action)
+          present(alertController, animated: true, completion: nil)
+          
+      }
 
 
 
 }
+
+
+
+//1) Класс с методом, который будет выводить алерт контроллер по строке используя дженерик 
+

@@ -14,25 +14,28 @@ struct LoginPresenter {
     
    var controller: LoginViewController
     
+    var data :DBProtocol = Database()
     
     init(controller:LoginViewController) {
-       self.controller = controller
-       
-        
+        self.controller = controller
             }
     
+
+    
     func logAdmin ( name: String?, password: String?   )  {
-        if (name == AppData.users[0].userName && password == AppData.users[0].password) {
+        if data.check(login: name, password: password) {
             let navAdminController = getCurrentStoryboard(storyBoardID: "navID")
             controller.present(navAdminController, animated: true, completion: nil)
         }
     }
+    
     
     func missLog (name: String?, password : String? ) {
         if (name != AppData.users[0].userName && password != AppData.users[0].userName) {
             controller.showError()
         }
     }
+    
     
        
     }

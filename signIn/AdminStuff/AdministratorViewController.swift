@@ -59,3 +59,6 @@ class AdministratorViewController: UIViewController, UITableViewDelegate, UITabl
 }
 
 
+
+
+// добавить кнопку на ячейку По нажатию на которую вызывался алерт контроллер с вопросом действительно ли я хочу удалить пользовател (два варинта ответа )

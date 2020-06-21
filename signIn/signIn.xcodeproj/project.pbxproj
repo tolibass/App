@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C0F5F59249E2AB900A56D45 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0F5F58249E2AB900A56D45 /* DataBase.swift */; };
 		1C26807C249A431300C7D1A0 /* AdminTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C26807B249A431300C7D1A0 /* AdminTableViewCell.swift */; };
 		1C268080249B382600C7D1A0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C26807F249B382600C7D1A0 /* DetailViewController.swift */; };
 		1C2AEF652493D2FD004CE9FB /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2AEF642493D2FD004CE9FB /* NavController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C0F5F58249E2AB900A56D45 /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		1C26807B249A431300C7D1A0 /* AdminTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTableViewCell.swift; sourceTree = "<group>"; };
 		1C26807F249B382600C7D1A0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		1C2AEF642493D2FD004CE9FB /* NavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				1C44A39624965C1E00394194 /* UserModel.swift */,
+				1C0F5F58249E2AB900A56D45 /* DataBase.swift */,
 				1C44A39A24966D9F00394194 /* AppData.swift */,
 			);
 			path = Models;
@@ -221,6 +224,7 @@
 				1C92E869248D6C15008393FE /* WorkerViewController.swift in Sources */,
 				1C26807C249A431300C7D1A0 /* AdminTableViewCell.swift in Sources */,
 				1C2AEF652493D2FD004CE9FB /* NavController.swift in Sources */,
+				1C0F5F59249E2AB900A56D45 /* DataBase.swift in Sources */,
 				1C44A3942494CBB400394194 /* AddUserAdminViewController.swift in Sources */,
 				1C44A39724965C1E00394194 /* UserModel.swift in Sources */,
 				1C4D534E249BBE1B00C33E12 /* extaensinForStoryboard.swift in Sources */,

@@ -10,10 +10,10 @@ import UIKit
 
      
     
-   public  func getCurrentStoryboard<VC : UIViewController>( storyBoardID : String) -> VC   {
+   public  func getCurrentStoryboard( storyBoardID : String) -> UIViewController    {
         let storiboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storiboard.instantiateViewController(identifier: storyBoardID)
-        return controller as! VC
+        return controller
          
         
     }

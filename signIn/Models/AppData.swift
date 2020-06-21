@@ -10,9 +10,19 @@ import Foundation
 import UIKit
 
  struct AppData {
-   static let users : [UserProtocol] = [User(userName: "Admin", type: .Admin, id: 1, login: "Admin", password: "Admin"), User(userName: "Admin2", type: .Admin, id: 1, login: "Admin", password: "Admin"), User(userName: "Admin3", type: .Admin, id: 1, login: "Admin", password: "Admin")]
+  static  var users : [UserProtocol] = [User(userName: "Admin", type: .Admin, id: 1, login: "Admin", password: "Admin"), User(userName: "Admin2", type: .Admin, id: 1, login: "Admin", password: "Admin"), User(userName: "Admin3", type: .Admin, id: 1, login: "Admin", password: "Admin")]
     
+    
+    
+}
+
+protocol  DBProtocol {
+    
+    func check ( login:String?, password: String? ) -> Bool 
+    
+    func addUsers ( userName : String ,type: userType, id: Int, login: String, password : String   ) -> Bool
 }
 
 
 
+// удаление и добавление пользователей Расширение протокола 
