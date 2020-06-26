@@ -20,9 +20,9 @@ protocol  DBProtocol {
     
     func check ( login:String?, password: String? ) -> Bool 
     
-    func addUsers ( userName : String ,type: userType, id: Int, login: String, password : String   ) -> Bool
+    func addUser ( userName : String ,type: userType, id: Int, login: String, password : String   ) -> Bool
+    
+    func deleteUser (id : Int) -> Bool
+
 }
 
-
-
-// удаление и добавление пользователей Расширение протокола 

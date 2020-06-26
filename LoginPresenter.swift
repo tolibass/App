@@ -12,20 +12,20 @@ import UIKit
 
 struct LoginPresenter {
     
-   var controller: LoginViewController
+   var controller: LoginViewConnection
     
     var data :DBProtocol = Database()
     
-    init(controller:LoginViewController) {
+    init(controller:LoginViewConnection) {
         self.controller = controller
             }
     
 
     
-    func logAdmin ( name: String?, password: String?   )  {
-        if data.check(login: name, password: password) {
+    func logAdmin ( login: String?, password: String?   )  {
+        if data.check(login: login, password: password) {
             let navAdminController = getCurrentStoryboard(storyBoardID: "navID")
-            controller.present(navAdminController, animated: true, completion: nil)
+            controller.presentVC(navAdminController)
         }
     }
     
@@ -42,7 +42,7 @@ struct LoginPresenter {
 
    protocol LoginViewConnection {
     func showError ()
-
+    func presentVC (_ controller : UIViewController)
     
       }
      

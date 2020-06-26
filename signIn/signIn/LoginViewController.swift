@@ -9,14 +9,11 @@
 import UIKit
 
 class LoginViewController: UIViewController, LoginViewConnection  {
-   
     
-    
-    @IBOutlet weak var userNameTextField: UITextField!
-    
-    @IBOutlet weak var passwordTextField: UITextField!
     var presenter :LoginPresenter?
     
+    @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
     
@@ -38,7 +35,7 @@ class LoginViewController: UIViewController, LoginViewConnection  {
     
     @IBAction func loginButtonAction(_ sender: Any) {
         
-        presenter?.logAdmin(name: userNameTextField.text, password: passwordTextField.text)
+        presenter?.logAdmin(login: userNameTextField.text, password: passwordTextField.text)
         
         presenter?.missLog(name: userNameTextField.text, password: passwordTextField.text)
     
@@ -48,13 +45,19 @@ class LoginViewController: UIViewController, LoginViewConnection  {
 
      
    func showError() {
-          let alertController = UIAlertController(title: "Ошибка", message: "Вы ввели неверный логин или пароль", preferredStyle: .alert)
-          let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
-          alertController.addAction(action)
-          present(alertController, animated: true, completion: nil)
           
+  let errorAlert =  AlertBuilder.create(title: "Внимание" ,
+                        message: "Вы ввели неверный логин или пароль",
+        actions: [UIAlertAction(title: "Ok",
+                                style: .default,
+                                handler: nil)])
+    present(errorAlert, animated: true, completion: nil)
       }
-
+    
+    
+    func presentVC(_ controller : UIViewController) {
+        present(controller, animated: true, completion: nil)
+    }
 
 
 }

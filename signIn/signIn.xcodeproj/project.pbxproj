@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C0F5F59249E2AB900A56D45 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0F5F58249E2AB900A56D45 /* DataBase.swift */; };
+		1C1B5A4524A1E03900194470 /* AdminPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1B5A4424A1E03900194470 /* AdminPresenter.swift */; };
 		1C26807C249A431300C7D1A0 /* AdminTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C26807B249A431300C7D1A0 /* AdminTableViewCell.swift */; };
 		1C268080249B382600C7D1A0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C26807F249B382600C7D1A0 /* DetailViewController.swift */; };
 		1C2AEF652493D2FD004CE9FB /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2AEF642493D2FD004CE9FB /* NavController.swift */; };
@@ -25,10 +26,13 @@
 		1C93FB43248D4AD100833A6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C93FB41248D4AD100833A6D /* Main.storyboard */; };
 		1C93FB45248D4AD900833A6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C93FB44248D4AD900833A6D /* Assets.xcassets */; };
 		1C93FB48248D4AD900833A6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C93FB46248D4AD900833A6D /* LaunchScreen.storyboard */; };
+		1CBBA0E524A3C27E00AAC0D8 /* AddUsersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBBA0E424A3C27E00AAC0D8 /* AddUsersPresenter.swift */; };
+		1CBBA0E924A5F43F00AAC0D8 /* AlertBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBBA0E824A5F43F00AAC0D8 /* AlertBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1C0F5F58249E2AB900A56D45 /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
+		1C1B5A4424A1E03900194470 /* AdminPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminPresenter.swift; sourceTree = "<group>"; };
 		1C26807B249A431300C7D1A0 /* AdminTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTableViewCell.swift; sourceTree = "<group>"; };
 		1C26807F249B382600C7D1A0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		1C2AEF642493D2FD004CE9FB /* NavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
@@ -48,6 +52,8 @@
 		1C93FB44248D4AD900833A6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C93FB47248D4AD900833A6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C93FB49248D4AD900833A6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CBBA0E424A3C27E00AAC0D8 /* AddUsersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUsersPresenter.swift; sourceTree = "<group>"; };
+		1CBBA0E824A5F43F00AAC0D8 /* AlertBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +87,13 @@
 		1C3AB4972494C54800AF882F /* AdminStuff */ = {
 			isa = PBXGroup;
 			children = (
+				1C1B5A4424A1E03900194470 /* AdminPresenter.swift */,
+				1CBBA0E824A5F43F00AAC0D8 /* AlertBuilder.swift */,
 				1C5C9B832490C51B009EA9E7 /* AdministratorViewController.swift */,
 				1C26807B249A431300C7D1A0 /* AdminTableViewCell.swift */,
 				1C2AEF642493D2FD004CE9FB /* NavController.swift */,
 				1C44A3932494CBB400394194 /* AddUserAdminViewController.swift */,
+				1CBBA0E424A3C27E00AAC0D8 /* AddUsersPresenter.swift */,
 				1C26807E249B367E00C7D1A0 /* AdminViewDetail */,
 			);
 			path = AdminStuff;
@@ -214,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CBBA0E924A5F43F00AAC0D8 /* AlertBuilder.swift in Sources */,
 				1C268080249B382600C7D1A0 /* DetailViewController.swift in Sources */,
 				1C44A39B24966D9F00394194 /* AppData.swift in Sources */,
 				1C92E867248D6C01008393FE /* ManagerViewController.swift in Sources */,
@@ -225,9 +235,11 @@
 				1C26807C249A431300C7D1A0 /* AdminTableViewCell.swift in Sources */,
 				1C2AEF652493D2FD004CE9FB /* NavController.swift in Sources */,
 				1C0F5F59249E2AB900A56D45 /* DataBase.swift in Sources */,
+				1CBBA0E524A3C27E00AAC0D8 /* AddUsersPresenter.swift in Sources */,
 				1C44A3942494CBB400394194 /* AddUserAdminViewController.swift in Sources */,
 				1C44A39724965C1E00394194 /* UserModel.swift in Sources */,
 				1C4D534E249BBE1B00C33E12 /* extaensinForStoryboard.swift in Sources */,
+				1C1B5A4524A1E03900194470 /* AdminPresenter.swift in Sources */,
 				1C93FB3E248D4AD100833A6D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

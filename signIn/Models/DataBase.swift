@@ -11,8 +11,15 @@ import Foundation
 struct Database : DBProtocol {
     
     
-    func addUsers(userName: String, type: userType, id: Int, login: String, password: String) -> Bool {
-        if checkUsersWithCurrentLogin(login: userName) { AppData.users.append(User(userName: userName, type: type, id: id, login: login, password: password))
+    func deleteUser(id: Int) -> Bool {
+        AppData.users.removeAll(where: {$0.id == id})
+        return true
+    }
+    
+    
+    
+    func addUser(userName: String, type: userType, id: Int, login: String, password: String) -> Bool {
+        if checkUsersWithCurrentLogin(login: login) { AppData.users.append(User(userName: userName, type: type, id: id, login: login, password: password))
         }
         return true
     }
@@ -20,14 +27,17 @@ struct Database : DBProtocol {
     
     func check(login: String?, password: String?) -> Bool {
     
-    
       return  AppData.users.filter({
          ($0.login == login && $0.password == password)
             }).count > 0
     }
     
+    
+    
     private func checkUsersWithCurrentLogin (login : String ) -> Bool  {
        return AppData.users.filter({$0.login == login}).count == 0}
+    
+    
     
     
     }
@@ -36,7 +46,8 @@ struct Database : DBProtocol {
 
 
 
-
+// переделать админа на презентер, удаление пользователей в админ панеле
+// изменение ролей 
 
 
 
@@ -59,3 +70,6 @@ struct Database : DBProtocol {
      })
   return false
    */
+
+
+//

@@ -10,19 +10,16 @@ import UIKit
 
 
 
-class AdministratorViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AdministratorViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AdminPresenterViewProtocol {
     
     
     
     
     @IBOutlet weak var AdmintableView: UITableView!
-    
- 
     @IBOutlet weak var LogOutButton: UIButton!
+
     
-    
-    
-    
+    var presenter :AdminPresenter? 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +27,7 @@ class AdministratorViewController: UIViewController, UITableViewDelegate, UITabl
         AdmintableView.delegate = self
         AdmintableView.dataSource = self
         
+        presenter = AdminPresenter(controller: self)
 
     }
     
@@ -54,11 +52,33 @@ class AdministratorViewController: UIViewController, UITableViewDelegate, UITabl
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
     
     }
-   
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+   
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            presenter?.startDelete(id: AppData.users[indexPath.row].id )
+                
+            
+            
+            
+        }
+    }
+  func present(alertController: UIAlertController) {
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func updateUser() {
+        AdmintableView.reloadData()
+        
+    }
 }
 
 
 
 
-// добавить кнопку на ячейку По нажатию на которую вызывался алерт контроллер с вопросом действительно ли я хочу удалить пользовател (два варинта ответа )
+
+//
