@@ -14,4 +14,10 @@ class AdminTableViewCell: UITableViewCell {
     @IBOutlet weak var roleLabel: UILabel!
     
 
+    @IBOutlet weak var changeRoleButton: UIButton!
+    
+    
+    
+    
+    
 }

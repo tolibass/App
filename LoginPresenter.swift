@@ -23,18 +23,17 @@ struct LoginPresenter {
 
     
     func logAdmin ( login: String?, password: String?   )  {
+        
+        
         if data.check(login: login, password: password) {
             let navAdminController = getCurrentStoryboard(storyBoardID: "navID")
             controller.presentVC(navAdminController)
-        }
+        }    else {controller.showError()}
+        
     }
     
     
-    func missLog (name: String?, password : String? ) {
-        if (name != AppData.users[0].userName && password != AppData.users[0].userName) {
-            controller.showError()
-        }
-    }
+    
     
     
        

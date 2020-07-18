@@ -19,7 +19,13 @@ class AdministratorViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var LogOutButton: UIButton!
 
     
-    var presenter :AdminPresenter? 
+    var presenter :AdminPresenter?
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        AdmintableView.reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,20 +44,19 @@ class AdministratorViewController: UIViewController, UITableViewDelegate, UITabl
     
 
    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return AppData.users.count
-   }
+    if items.count != 0 {
+        return items.count
+    }; return 0
+    }
    
    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell : AdminTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell")! as! AdminTableViewCell
-    cell.usernameLabel.text = AppData.users[indexPath.row].userName
-    cell.roleLabel.text = AppData.users[indexPath.row].type.rawValue
-    cell.accessoryType = .detailButton
-    return cell
+    let returnCell = (presenter?.createCell(tableView: tableView, indexPath: indexPath))!
+    returnCell.changeRoleButton.addTarget(self, action: #selector(changeRoleAction(sender:)), for: .touchUpInside)
+    returnCell.changeRoleButton.tag = indexPath.row
+    return returnCell
    }
     
-    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
     
-    }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
@@ -64,9 +69,19 @@ class AdministratorViewController: UIViewController, UITableViewDelegate, UITabl
                 
             
             
-            
         }
     }
+    
+    @objc func changeRoleAction ( sender : UIButton  ) {
+        let index = sender.tag
+        let changeRoleVC = getCurrentStoryboard(storyBoardID: "changeRole") as! ChangeRoleViewController
+        changeRoleVC.index = index
+        show(changeRoleVC, sender: nil)
+        
+    }
+    
+    
+    
   func present(alertController: UIAlertController) {
         present(alertController, animated: true, completion: nil)
     }
@@ -81,4 +96,4 @@ class AdministratorViewController: UIViewController, UITableViewDelegate, UITabl
 
 
 
-//
+

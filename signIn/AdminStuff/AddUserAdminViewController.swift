@@ -30,7 +30,7 @@ class AddUserAdminViewController: UIViewController, AddUsersProtocol {
     
     var presenter : AddUsersPresenter?
     
-    var localUser = User(userName: "asd", type: .Admin, id: 2, login: "asd", password: "asd")
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,16 +55,7 @@ class AddUserAdminViewController: UIViewController, AddUsersProtocol {
     
     @IBAction func selectedTypeAction(_ sender: UISegmentedControl) {
         
-        switch sender.selectedSegmentIndex {
-        case 0:
-            localUser.type = .Admin
-            case 1:
-            localUser.type = .Manager
-            case 2:
-            localUser.type = .Worker
-        default:
-            break 
-        }
+        
        
         }
     
@@ -73,7 +64,7 @@ class AddUserAdminViewController: UIViewController, AddUsersProtocol {
     
     
     @IBAction func SaveInformationButtonAction(_ sender: Any) {
-        var type :userType = .Admin
+        var type : userType = .Admin
         switch userTypeSegment.selectedSegmentIndex {
         case 0:
             type = .Admin
@@ -99,7 +90,7 @@ class AddUserAdminViewController: UIViewController, AddUsersProtocol {
        }
        
        func userAdded() {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
        }
    
     enum error : String {

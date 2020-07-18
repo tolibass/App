@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+
+
+
+
 struct AdminPresenter {
     
     
@@ -22,19 +26,43 @@ struct AdminPresenter {
         
     }
 
-    private func removeUser ( id : Int ) {
-       AppData.users.removeAll(where: {id == $0.id })
+    private func removeUser ( id : Int, user: UserProtocol ) {
+      let users = realmBD.objects(User.self).filter({id == $0.id})
+           
+       
+          if let user = users.first {
+           do {
+               try realmBD.write() {
+                   realmBD.delete(user)
+               }
+           } catch  {
+               print(error)
+           }
+       }
+       
         controller.updateUser()
     }
+    var items : Results<User>!
+    
+    func createCell (tableView : UITableView, indexPath : IndexPath ) -> AdminTableViewCell {
+        let cell : AdminTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell")! as! AdminTableViewCell
+        let item = items[indexPath.row]
+        cell.usernameLabel.text = item.login
+        cell.roleLabel.text = item.type.map { $0.rawValue }
+        
+        
+        return cell
+    }
+    
+
+    
     
     func startDelete (id : Int) {
     let deleteAction = AlertBuilder.create(title: "Внимание",
                             message: "Вы действительно хотите удалить пользователя?",
                             actions: [(UIAlertAction(title: "Ok",
-                                                    style: .default,
-                                                    handler: { (alert) in
-                                                        AppData.users.removeAll(where: {id == $0.id } )
-                            })),
+                                                     style: .default,
+                                                     handler: {_ in  self.removeUser(id: id, user: User) })),
                                       (UIAlertAction(title: "No", style: .cancel, handler: nil))])
         controller.present(alertController: deleteAction)
     }
@@ -42,11 +70,14 @@ struct AdminPresenter {
 
 }
 
+        
+    
 
-protocol AdminPresenterViewProtocol {
+        
+        
+
+        protocol AdminPresenterViewProtocol {
     
     func present (alertController: UIAlertController)
     func updateUser () 
 }
-
-

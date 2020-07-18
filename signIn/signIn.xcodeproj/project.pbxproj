@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,8 @@
 		1C44A39B24966D9F00394194 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C44A39A24966D9F00394194 /* AppData.swift */; };
 		1C4D534E249BBE1B00C33E12 /* extaensinForStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4D534D249BBE1A00C33E12 /* extaensinForStoryboard.swift */; };
 		1C5C9B842490C51B009EA9E7 /* AdministratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5C9B832490C51B009EA9E7 /* AdministratorViewController.swift */; };
+		1C8EB44924A9E89500B19A6B /* ChangeRoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8EB44824A9E89500B19A6B /* ChangeRoleViewController.swift */; };
+		1C8EB44B24A9E8F900B19A6B /* ChangeRolePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8EB44A24A9E8F900B19A6B /* ChangeRolePresenter.swift */; };
 		1C92E867248D6C01008393FE /* ManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C92E866248D6C01008393FE /* ManagerViewController.swift */; };
 		1C92E869248D6C15008393FE /* WorkerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C92E868248D6C15008393FE /* WorkerViewController.swift */; };
 		1C93FB3C248D4AD100833A6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C93FB3B248D4AD100833A6D /* AppDelegate.swift */; };
@@ -28,6 +30,7 @@
 		1C93FB48248D4AD900833A6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C93FB46248D4AD900833A6D /* LaunchScreen.storyboard */; };
 		1CBBA0E524A3C27E00AAC0D8 /* AddUsersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBBA0E424A3C27E00AAC0D8 /* AddUsersPresenter.swift */; };
 		1CBBA0E924A5F43F00AAC0D8 /* AlertBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBBA0E824A5F43F00AAC0D8 /* AlertBuilder.swift */; };
+		951394881B705D2C9DFB1A5E /* Pods_signIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6BF67DBC87A95C6C79144E /* Pods_signIn.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,8 @@
 		1C44A39A24966D9F00394194 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		1C4D534D249BBE1A00C33E12 /* extaensinForStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extaensinForStoryboard.swift; sourceTree = "<group>"; };
 		1C5C9B832490C51B009EA9E7 /* AdministratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdministratorViewController.swift; sourceTree = "<group>"; };
+		1C8EB44824A9E89500B19A6B /* ChangeRoleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeRoleViewController.swift; sourceTree = "<group>"; };
+		1C8EB44A24A9E8F900B19A6B /* ChangeRolePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeRolePresenter.swift; sourceTree = "<group>"; };
 		1C92E866248D6C01008393FE /* ManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerViewController.swift; sourceTree = "<group>"; };
 		1C92E868248D6C15008393FE /* WorkerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerViewController.swift; sourceTree = "<group>"; };
 		1C93FB38248D4AD100833A6D /* signIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = signIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +59,9 @@
 		1C93FB49248D4AD900833A6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CBBA0E424A3C27E00AAC0D8 /* AddUsersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUsersPresenter.swift; sourceTree = "<group>"; };
 		1CBBA0E824A5F43F00AAC0D8 /* AlertBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBuilder.swift; sourceTree = "<group>"; };
+		4E28024E27863D0BBFE8874D /* Pods-signIn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signIn.release.xcconfig"; path = "Target Support Files/Pods-signIn/Pods-signIn.release.xcconfig"; sourceTree = "<group>"; };
+		5A6BF67DBC87A95C6C79144E /* Pods_signIn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_signIn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4ECC00713EDD6B70E9158D5 /* Pods-signIn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signIn.debug.xcconfig"; path = "Target Support Files/Pods-signIn/Pods-signIn.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				951394881B705D2C9DFB1A5E /* Pods_signIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,13 +96,15 @@
 		1C3AB4972494C54800AF882F /* AdminStuff */ = {
 			isa = PBXGroup;
 			children = (
-				1C1B5A4424A1E03900194470 /* AdminPresenter.swift */,
 				1CBBA0E824A5F43F00AAC0D8 /* AlertBuilder.swift */,
+				1C1B5A4424A1E03900194470 /* AdminPresenter.swift */,
 				1C5C9B832490C51B009EA9E7 /* AdministratorViewController.swift */,
 				1C26807B249A431300C7D1A0 /* AdminTableViewCell.swift */,
 				1C2AEF642493D2FD004CE9FB /* NavController.swift */,
 				1C44A3932494CBB400394194 /* AddUserAdminViewController.swift */,
 				1CBBA0E424A3C27E00AAC0D8 /* AddUsersPresenter.swift */,
+				1C8EB44824A9E89500B19A6B /* ChangeRoleViewController.swift */,
+				1C8EB44A24A9E8F900B19A6B /* ChangeRolePresenter.swift */,
 				1C26807E249B367E00C7D1A0 /* AdminViewDetail */,
 			);
 			path = AdminStuff;
@@ -127,6 +138,8 @@
 				1C93FB3A248D4AD100833A6D /* signIn */,
 				1C93FB39248D4AD100833A6D /* Products */,
 				1C26807D249A861900C7D1A0 /* New Group */,
+				F183933D13C5122646559BF4 /* Pods */,
+				70D2DCA50BEF8EC0CFEBB71F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,6 +165,23 @@
 			path = signIn;
 			sourceTree = "<group>";
 		};
+		70D2DCA50BEF8EC0CFEBB71F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A6BF67DBC87A95C6C79144E /* Pods_signIn.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F183933D13C5122646559BF4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E4ECC00713EDD6B70E9158D5 /* Pods-signIn.debug.xcconfig */,
+				4E28024E27863D0BBFE8874D /* Pods-signIn.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +189,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1C93FB4C248D4AD900833A6D /* Build configuration list for PBXNativeTarget "signIn" */;
 			buildPhases = (
+				BF3FFE637766E5320E9D0229 /* [CP] Check Pods Manifest.lock */,
 				1C93FB34248D4AD100833A6D /* Sources */,
 				1C93FB35248D4AD100833A6D /* Frameworks */,
 				1C93FB36248D4AD100833A6D /* Resources */,
+				107330E24CF98AF02165E320 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -218,6 +250,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		107330E24CF98AF02165E320 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-signIn/Pods-signIn-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-signIn/Pods-signIn-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-signIn/Pods-signIn-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF3FFE637766E5320E9D0229 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-signIn-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1C93FB34248D4AD100833A6D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -227,6 +301,7 @@
 				1C268080249B382600C7D1A0 /* DetailViewController.swift in Sources */,
 				1C44A39B24966D9F00394194 /* AppData.swift in Sources */,
 				1C92E867248D6C01008393FE /* ManagerViewController.swift in Sources */,
+				1C8EB44924A9E89500B19A6B /* ChangeRoleViewController.swift in Sources */,
 				1C93FB40248D4AD100833A6D /* LoginViewController.swift in Sources */,
 				1C5C9B842490C51B009EA9E7 /* AdministratorViewController.swift in Sources */,
 				1C93FB3C248D4AD100833A6D /* AppDelegate.swift in Sources */,
@@ -238,6 +313,7 @@
 				1CBBA0E524A3C27E00AAC0D8 /* AddUsersPresenter.swift in Sources */,
 				1C44A3942494CBB400394194 /* AddUserAdminViewController.swift in Sources */,
 				1C44A39724965C1E00394194 /* UserModel.swift in Sources */,
+				1C8EB44B24A9E8F900B19A6B /* ChangeRolePresenter.swift in Sources */,
 				1C4D534E249BBE1B00C33E12 /* extaensinForStoryboard.swift in Sources */,
 				1C1B5A4524A1E03900194470 /* AdminPresenter.swift in Sources */,
 				1C93FB3E248D4AD100833A6D /* SceneDelegate.swift in Sources */,
@@ -382,6 +458,7 @@
 		};
 		1C93FB4D248D4AD900833A6D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4ECC00713EDD6B70E9158D5 /* Pods-signIn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -400,6 +477,7 @@
 		};
 		1C93FB4E248D4AD900833A6D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E28024E27863D0BBFE8874D /* Pods-signIn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

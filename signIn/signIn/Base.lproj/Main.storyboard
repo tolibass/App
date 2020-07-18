@@ -86,9 +86,15 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFC-1W-Zvy">
+                                                    <rect key="frame" x="280" y="7" width="46" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="changeRoleButton" destination="lFC-1W-Zvy" id="m7J-H0-uXs"/>
                                             <outlet property="roleLabel" destination="2gU-Ke-P6J" id="pwu-RP-lpX"/>
                                             <outlet property="usernameLabel" destination="Ghi-OX-4R6" id="DVH-0Q-JLH"/>
                                         </connections>
@@ -162,6 +168,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4GL-5M-688" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2728.985507246377" y="728.57142857142856"/>
+        </scene>
+        <!--Change Role View Controller-->
+        <scene sceneID="sch-qI-kKe">
+            <objects>
+                <viewController storyboardIdentifier="changeRole" id="N9y-xF-5mz" customClass="ChangeRoleViewController" customModule="signIn" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5sK-4O-jJc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OgS-e9-ifN">
+                                <rect key="frame" x="36" y="329" width="342" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Worker"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeRoleSegmentAction:" destination="N9y-xF-5mz" eventType="valueChanged" id="LNH-ZH-EaU"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="3Jg-WP-gsn"/>
+                    </view>
+                    <connections>
+                        <outlet property="changeRoleSegmentOutlet" destination="OgS-e9-ifN" id="H4Q-mv-KAs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qkv-9W-SSk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3495.652173913044" y="728.57142857142856"/>
         </scene>
         <!--Add User Admin View Controller-->
         <scene sceneID="T8n-Xv-uqo">
@@ -238,7 +276,6 @@
                                     <segment title="Worker"/>
                                 </segments>
                                 <connections>
-                                    <action selector="SegmentAction:" destination="7xJ-Ff-eZB" eventType="valueChanged" id="a7q-69-Jd6"/>
                                     <action selector="selectedTypeAction:" destination="7xJ-Ff-eZB" eventType="valueChanged" id="3iN-rQ-Cr5"/>
                                 </connections>
                             </segmentedControl>

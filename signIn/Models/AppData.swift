@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
  struct AppData {
-  static  var users : [UserProtocol] = [User(userName: "Admin", type: .Admin, id: 1, login: "Admin", password: "Admin"), User(userName: "Admin2", type: .Admin, id: 1, login: "Admin", password: "Admin"), User(userName: "Admin3", type: .Admin, id: 1, login: "Admin", password: "Admin")]
+ // static  var users : [UserProtocol] = [User(userName: "Admin", type: .Admin, id: 1, login: "Admin", password: "Admin"), User(userName: "Admin2", type: .Admin, id: 2, login: "Admin", password: "Admin"), User(userName: "Admin3", type: .Admin, id: 3, login: "Admin", password: "Admin")]
     
     
     
@@ -20,9 +20,12 @@ protocol  DBProtocol {
     
     func check ( login:String?, password: String? ) -> Bool 
     
-    func addUser ( userName : String ,type: userType, id: Int, login: String, password : String   ) -> Bool
+    func updateUserRole (role : userType, id : Int)
     
-    func deleteUser (id : Int) -> Bool
+    func addUser ( user : UserProtocol ) -> Bool
+    
+    func deleteUser ( user : UserProtocol) -> Bool 
+
 
 }
 

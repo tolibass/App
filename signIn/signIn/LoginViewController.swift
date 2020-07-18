@@ -37,7 +37,7 @@ class LoginViewController: UIViewController, LoginViewConnection  {
         
         presenter?.logAdmin(login: userNameTextField.text, password: passwordTextField.text)
         
-        presenter?.missLog(name: userNameTextField.text, password: passwordTextField.text)
+       
     
             
         }

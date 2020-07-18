@@ -8,32 +8,33 @@
 
 import Foundation
 import UIKit
+import RealmSwift
 
-protocol UserProtocol {
-    var userName : String {get }
-    var type : userType {get set }
-    var id : Int {get }
-    var login : String {get }
-    var password : String {get }
+protocol UserProtocol: Object {
+    dynamic var userName : String? {get }
+    dynamic var type : userType? {get set }
+    dynamic var id : Int {get }
+    dynamic var login : String? {get }
+    dynamic var password : String? {get }
 }
 
-struct User : UserProtocol {
-    var userName : String
-    var type : userType
-    var id : Int
-    var login: String
-    var password: String
+class User : Object, UserProtocol  {
+    @objc dynamic var userName : String?
+    dynamic var type : userType?
+    @objc dynamic var id : Int = -1
+    @objc dynamic var login: String?
+    @objc dynamic var password: String?
     
     
     }
 
-struct WorkerUser : UserProtocol {
-    var userName : String
-    var type : userType
-    var id : Int
-    var login: String
-    var password: String
-    var history : [String]
+class WorkerUser : Object, UserProtocol {
+    @objc dynamic var userName : String?
+    dynamic var type : userType?
+    @objc dynamic var id : Int = -1
+    @objc dynamic var login: String?
+    @objc dynamic var password: String?
+    @objc dynamic var history : [String]?
 }
 
     
