@@ -11,14 +11,15 @@ import RealmSwift
 
 struct Database : DBProtocol {
     
-        
-    
-    
-    
-        
     
     var realmDB : Realm = try! Realm()
     
+    
+    
+    func getUsers() -> [UserProtocol] {
+           
+           return Array (realmDB.objects(User.self))
+       }
     
     
     

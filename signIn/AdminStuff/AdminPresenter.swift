@@ -16,6 +16,10 @@ import UIKit
 struct AdminPresenter {
     
     
+    var usersFromDB : [UserProtocol]?
+    
+   
+
     
     var controller : AdminPresenterViewProtocol
     var data : DBProtocol = Database()
@@ -23,32 +27,29 @@ struct AdminPresenter {
     
     init( controller : AdminPresenterViewProtocol ) {
         self.controller = controller
+        usersFromDB = data.getUsers()
         
     }
+    
+    func getUserCount () -> Int {
+        return usersFromDB?.count ?? 0
+    }
+    
 
-    private func removeUser ( id : Int, user: UserProtocol ) {
-      let users = realmBD.objects(User.self).filter({id == $0.id})
+    private func removeUser ( user: UserProtocol ) {
+        data.deleteUser(user: user)
            
        
-          if let user = users.first {
-           do {
-               try realmBD.write() {
-                   realmBD.delete(user)
-               }
-           } catch  {
-               print(error)
-           }
-       }
        
         controller.updateUser()
     }
-    var items : Results<User>!
+   
     
     func createCell (tableView : UITableView, indexPath : IndexPath ) -> AdminTableViewCell {
         let cell : AdminTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell")! as! AdminTableViewCell
-        let item = items[indexPath.row]
+        let item = usersFromDB![indexPath.row]
         cell.usernameLabel.text = item.login
-        cell.roleLabel.text = item.type.map { $0.rawValue }
+        cell.roleLabel.text = item.type?.rawValue
         
         
         return cell
@@ -62,9 +63,13 @@ struct AdminPresenter {
                             message: "Вы действительно хотите удалить пользователя?",
                             actions: [(UIAlertAction(title: "Ok",
                                                      style: .default,
-                                                     handler: {_ in  self.removeUser(id: id, user: User) })),
+                                                     handler: {_ in  self.removeUser( user: self.getUserById(id: id) ) })),
                                       (UIAlertAction(title: "No", style: .cancel, handler: nil))])
         controller.present(alertController: deleteAction)
+    }
+    
+    func getUserById (id: Int) -> UserProtocol {
+        return (usersFromDB?.filter({id == $0.id}).first)!
     }
 
 

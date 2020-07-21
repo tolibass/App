@@ -19,9 +19,10 @@ struct AddUsersPresenter {
         self.controller = controller
     }
     
-    func addUser(userName: String, type: userType, id: Int, login: String, password: String) {
+    func addUser(user : UserProtocol) {
         
-        if data.addUser(userName: userName, type: type, id: id, login: login, password: password) {
+        
+        if data.addUser(user: user) {
             controller.userAdded()
         }
         

@@ -19,7 +19,8 @@ struct ChangeRolePresenter {
     }
    
     func getRoleIdBy (index : Int) -> Int {
-        let role = AppData.users[index].type
+        let getRole = data.getUsers()
+        let role = getRole[index].id
         switch role {
         case .Admin:
             return 0

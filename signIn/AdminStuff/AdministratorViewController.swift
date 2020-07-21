@@ -44,9 +44,8 @@ class AdministratorViewController: UIViewController, UITableViewDelegate, UITabl
     
 
    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    if items.count != 0 {
-        return items.count
-    }; return 0
+    return (presenter?.usersFromDB!.count)!
+   
     }
    
    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -58,14 +57,12 @@ class AdministratorViewController: UIViewController, UITableViewDelegate, UITabl
     
     
     
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
+   
    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             
-            presenter?.startDelete(id: AppData.users[indexPath.row].id )
+            presenter?.startDelete(id: (presenter?.usersFromDB![indexPath.row].id)! )
                 
             
             

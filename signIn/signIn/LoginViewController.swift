@@ -21,8 +21,8 @@ class LoginViewController: UIViewController, LoginViewConnection  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        presenter = LoginPresenter(controller: self)
+                
+        presenter = LoginPresenter( controller:  self )
         
      loginButton.layer.cornerRadius = 10
             loginButton.layer.borderWidth = 2.0

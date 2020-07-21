@@ -26,6 +26,8 @@ protocol  DBProtocol {
     
     func deleteUser ( user : UserProtocol) -> Bool 
 
-
+    func getUsers () -> [UserProtocol]
 }
+
+
 

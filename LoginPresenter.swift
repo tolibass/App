@@ -16,7 +16,7 @@ struct LoginPresenter {
     
     var data :DBProtocol = Database()
     
-    init(controller:LoginViewConnection) {
+    init(controller : LoginViewConnection) {
         self.controller = controller
             }
     
